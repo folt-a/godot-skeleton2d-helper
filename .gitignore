@@ -1,0 +1,10 @@
+# Godot 4+ specific ignores
+.godot/
+
+batch/
+document/
+resource/
+savedata/
+
+/addons/*
+!addons/godot-skeleton2d-helper/

@@ -1,0 +1,1160 @@
+[gd_scene load_steps=8 format=3 uid="uid://5ymuw1sj2boj"]
+
+[ext_resource type="Script" path="res://addons/godot-skeleton2d-helper/bottom_dock.gd" id="1_twpo7"]
+[ext_resource type="Script" path="res://addons/godot-skeleton2d-helper/drop_button.gd" id="2_hstm8"]
+[ext_resource type="Script" path="res://addons/godot-skeleton2d-helper/polygon_points.gd" id="3_8ota3"]
+[ext_resource type="Script" path="res://addons/godot-skeleton2d-helper/file_drop_tree.gd" id="3_t4msw"]
+[ext_resource type="Script" path="res://addons/godot-skeleton2d-helper/image_rect_drop_tree.gd" id="5_kfj81"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_h3ic0"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_bo4g7"]
+
+[node name="FoltaAGMHelperBottomDock" type="MarginContainer" node_paths=PackedStringArray("tab_container", "character", "tr_controls", "character_tab_container", "refresh_character_button", "bone_list_tree", "selecting_bone_label", "selecting_rename_line_edit", "selecting_bone_texture_rect", "selecting_bone_name_label", "bone_buttons_label", "bone_buttons", "add_bone_button", "add_bone_from_head_button", "move_bone_sentan_button", "move_bone_head_button", "bone_move_snap_option_button", "near_select_button", "sprite_near_select_button", "selecting_sprite_name_label", "selecting_sprite_texture_rect", "sprite_selecting_rename_line_edit", "selecting_animation_player_texture_rect", "selecting_animation_player_label", "insert_key_frame_button", "insert_key_frame_with_children_button", "image_tree", "image_texture_rect", "image_cursor_sprite_2d", "image_atlas_position_x_spin_box", "image_atlas_position_y_spin_box", "image_atlas_size_width_spin_box", "image_atlas_size_height_spin_box", "image_pivot_x_spin_box", "image_pivot_y_spin_box", "image_padding_spin_box", "color_rect", "color_picker_button", "image_snap_option_button", "image_cursor_option_button_ig", "image_rect_item_tree", "zoom_value_label_ig", "image_zoom_h_slider", "image_name_line_edit", "image_mode_option_button", "sprite_visible_button", "polygon_points", "polygon_menu_h_box_container", "add_outer_polygon_point_button", "move_outer_polygon_point_button", "remove_outer_polygon_point_button", "add_inner_polygon_point_button", "move_inner_polygon_point_button", "remove_inner_polygon_point_button", "polygon_parent_icon_texture_rect", "polygon_parent_label_ig")]
+editor_description = "GuiVisibilityVisible"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1_twpo7")
+tab_container = NodePath("TabContainer")
+character = NodePath("TabContainer/Character")
+tr_controls = [NodePath("TabContainer/Character/Character/AlwaysVBoxContainer/VisibleToggleCharacterButton"), NodePath("TabContainer/Character/Character/AlwaysVBoxContainer/BoneTabButton"), NodePath("TabContainer/Character/Character/AlwaysVBoxContainer/ImageTabButton"), NodePath("TabContainer/Character/Character/AlwaysVBoxContainer/AnimationTabButton"), NodePath("TabContainer/Character/Character/AlwaysVBoxContainer/VBoxContainer/RefreshCharacterButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/HeaderHBoxContainer/SelectTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/HeaderHBoxContainer/SelectTextureRect2"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/HeaderHBoxContainer/SelectBoneLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingBoneLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingBoneTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingLockToggleButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/RenameLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/NearSelectButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectParentButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectChildButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectNextButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectAllButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/HeaderHBoxContainer/SelectTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/HeaderHBoxContainer/SelectTextureRect2"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/HeaderHBoxContainer/SelectSpriteLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SelectingSpriteLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SelectingSpriteTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteVisibleButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectingLockToggleButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteRenameLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteNearSelectButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectParentButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectChildButton"), NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectNextButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/HeaderHBoxContainer/BoneTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/HeaderHBoxContainer/BoneButtonsLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/MoveBoneHeadButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/MoveBoneSentanButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneFromHeadButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/HeaderHBoxContainer/ImageTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/HeaderHBoxContainer/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/SelectingBoneLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/SelectingBoneTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/SelectingLockToggleButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/RenameLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/Label2"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/ImageTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/AddImageButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/AddImageDirButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/RemoveImageButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/RemoveImageCheckButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTextInputHBoxContainer/ImageTextInputConfirmButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Label3"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer/ImageTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/TextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddOuterPolygonPointButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddOuterPolygonInternalPointButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/MoveOuterPolygonPointButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/RemoveOuterPolygonPointButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/TextureRect2"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/Label2"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddInnerPolygonPointButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/MoveInnerPolygonPointButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/RemoveInnerPolygonPointButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ZoomAutoCheckBox"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/Label2"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/LabelIg2"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ColorPickerButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Label3"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/LabelIg3"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/HBoxContainer/AddImageRectButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/HBoxContainer/RemoveImageRectCheckButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer/Label2"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label3"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label4"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label5"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ImageAddOneButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ImageAddPolygonButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/PolygonParentIconTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/PolygonParentSelectButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/PolygonViewerNodeAddButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/HeaderHBoxContainer/AnimationPlayerTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/HeaderHBoxContainer/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/SelectingAnimationPlayerTextureRect"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/SelectingAnimationPlayerLabel"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/Label"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/SelectAnimationPlayerButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/InsertKeyFrameButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/InsertKeyFrameWithChildrenButton")]
+character_tab_container = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer")
+refresh_character_button = NodePath("TabContainer/Character/Character/AlwaysVBoxContainer/VBoxContainer/RefreshCharacterButton")
+bone_list_tree = NodePath("TabContainer/Character/HSplitContainer/BoneListTree")
+selecting_bone_label = NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingBoneLabel")
+selecting_rename_line_edit = NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingRenameLineEdit")
+selecting_bone_texture_rect = NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingBoneTextureRect")
+selecting_bone_name_label = NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingBoneNameLabelIg")
+bone_buttons_label = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/HeaderHBoxContainer/BoneButtonsLabel")
+bone_buttons = [NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneFromHeadButton"), NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/MoveBoneSentanButton")]
+add_bone_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneButton")
+add_bone_from_head_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneFromHeadButton")
+move_bone_sentan_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/MoveBoneSentanButton")
+move_bone_head_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/MoveBoneHeadButton")
+bone_move_snap_option_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/BoneMoveSnapOptionButtonIg")
+near_select_button = NodePath("TabContainer/Character/Character/VBoxContainer/SelectBone/NearSelectButton")
+sprite_near_select_button = NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteNearSelectButton")
+selecting_sprite_name_label = NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SelectingSpriteNameLabelIg")
+selecting_sprite_texture_rect = NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SelectingSpriteTextureRect")
+sprite_selecting_rename_line_edit = NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectingRenameLineEdit")
+selecting_animation_player_texture_rect = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/SelectingAnimationPlayerTextureRect")
+selecting_animation_player_label = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/SelectingAnimationPlayerLabelIg")
+insert_key_frame_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/InsertKeyFrameButton")
+insert_key_frame_with_children_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/InsertKeyFrameWithChildrenButton")
+image_tree = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTree")
+image_texture_rect = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer/ImageTextureRect")
+image_cursor_sprite_2d = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer/ImageCursorSprite2D")
+image_atlas_position_x_spin_box = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer/ImageAtlasPositionXSpinBox")
+image_atlas_position_y_spin_box = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer/ImageAtlasPositionYSpinBox")
+image_atlas_size_width_spin_box = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/ImageAtlasSizeWidthSpinBox")
+image_atlas_size_height_spin_box = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/ImageAtlasSizeHeightSpinBox")
+image_pivot_x_spin_box = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer/ImagePivotXSpinBox")
+image_pivot_y_spin_box = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer/ImagePivotYSpinBox")
+image_padding_spin_box = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImagePaddingSpinBox")
+color_rect = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer/ColorRect")
+color_picker_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ColorPickerButton")
+image_snap_option_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImageSnapOptionButtonIg")
+image_cursor_option_button_ig = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImageCursorOptionButtonIg")
+image_rect_item_tree = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/ImageRectItemTree")
+zoom_value_label_ig = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ZoomValueLabelIg")
+image_zoom_h_slider = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ImageZoomHSlider")
+image_name_line_edit = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImageNameLineEdit")
+image_mode_option_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/ImageModeOptionButtonIg")
+sprite_visible_button = NodePath("TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteVisibleButton")
+polygon_points = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer/PolygonPoints")
+polygon_menu_h_box_container = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer")
+add_outer_polygon_point_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddOuterPolygonPointButton")
+move_outer_polygon_point_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/MoveOuterPolygonPointButton")
+remove_outer_polygon_point_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/RemoveOuterPolygonPointButton")
+add_inner_polygon_point_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddInnerPolygonPointButton")
+move_inner_polygon_point_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/MoveInnerPolygonPointButton")
+remove_inner_polygon_point_button = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/RemoveInnerPolygonPointButton")
+polygon_parent_icon_texture_rect = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/PolygonParentIconTextureRect")
+polygon_parent_label_ig = NodePath("TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/PolygonParentLabelIg")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 2
+current_tab = 1
+tabs_position = 1
+
+[node name="_" type="VBoxContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Character" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_tab_index = 1
+
+[node name="Character" type="HBoxContainer" parent="TabContainer/Character"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AlwaysVBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character"]
+layout_mode = 2
+
+[node name="VisibleToggleCharacterButton" type="Button" parent="TabContainer/Character/Character/AlwaysVBoxContainer"]
+visible = false
+layout_mode = 2
+toggle_mode = true
+
+[node name="BoneTabButton" type="Button" parent="TabContainer/Character/Character/AlwaysVBoxContainer"]
+editor_description = "Bone"
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_h3ic0")
+
+[node name="ImageTabButton" type="Button" parent="TabContainer/Character/Character/AlwaysVBoxContainer"]
+editor_description = "Image"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h3ic0")
+
+[node name="AnimationTabButton" type="Button" parent="TabContainer/Character/Character/AlwaysVBoxContainer"]
+editor_description = "AnimationPlayer"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_h3ic0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character/AlwaysVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="RefreshCharacterButton" type="Button" parent="TabContainer/Character/Character/AlwaysVBoxContainer/VBoxContainer"]
+editor_description = "Reload"
+layout_mode = 2
+text = "Reflesh/再読込"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SelectBone" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="HeaderHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="SelectTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/SelectBone/HeaderHBoxContainer"]
+editor_description = "ToolSelect"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectTextureRect2" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/SelectBone/HeaderHBoxContainer"]
+editor_description = "Bone2D"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectBoneLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectBone/HeaderHBoxContainer"]
+layout_mode = 2
+text = "Select Bone"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+layout_mode = 2
+
+[node name="SelectingBoneLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+layout_mode = 2
+text = "Selecting"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+layout_mode = 2
+text = ":"
+
+[node name="SelectingBoneTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+editor_description = "Bone2D"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectingBoneNameLabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+custom_minimum_size = Vector2(248, 0)
+layout_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SelectingLockToggleButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+editor_description = "Lock"
+layout_mode = 2
+toggle_mode = true
+
+[node name="RenameLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+layout_mode = 2
+text = "Rename"
+
+[node name="Label2Ig" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+layout_mode = 2
+text = ":"
+
+[node name="SelectingRenameLineEdit" type="LineEdit" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="NearSelectButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+editor_description = "ToolSelect"
+layout_mode = 2
+text = "Near Select"
+
+[node name="SelectParentButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+editor_description = "ArrowUp"
+layout_mode = 2
+text = "Select Parent"
+
+[node name="SelectChildButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+editor_description = "ArrowDown"
+layout_mode = 2
+text = "Select Child"
+
+[node name="SelectNextButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+editor_description = "PageNext"
+layout_mode = 2
+text = "Select Next"
+
+[node name="SelectAllButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectBone"]
+layout_mode = 2
+text = "Select All"
+
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Character/Character/VBoxContainer"]
+layout_mode = 2
+
+[node name="SelectSprite" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="HeaderHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="SelectTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite/HeaderHBoxContainer"]
+editor_description = "ToolSelect"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectTextureRect2" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite/HeaderHBoxContainer"]
+editor_description = "Sprite2D"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectSpriteLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite/HeaderHBoxContainer"]
+layout_mode = 2
+text = "Select Sprite"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+layout_mode = 2
+
+[node name="SelectingSpriteLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+layout_mode = 2
+text = "Selecting"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+layout_mode = 2
+text = ":"
+
+[node name="SelectingSpriteTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+editor_description = "Sprite2D"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectingSpriteNameLabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SpriteVisibleButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+unique_name_in_owner = true
+editor_description = "GuiVisibilityVisible"
+layout_mode = 2
+flat = true
+
+[node name="SpriteSelectingLockToggleButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+editor_description = "Lock"
+layout_mode = 2
+toggle_mode = true
+
+[node name="SpriteRenameLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+layout_mode = 2
+text = "Rename"
+
+[node name="Label2Ig" type="Label" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+layout_mode = 2
+text = ":"
+
+[node name="SpriteSelectingRenameLineEdit" type="LineEdit" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="SpriteNearSelectButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+editor_description = "ToolSelect"
+layout_mode = 2
+text = "Near Select"
+
+[node name="SpriteSelectParentButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+editor_description = "ArrowUp"
+layout_mode = 2
+text = "Select Parent"
+
+[node name="SpriteSelectChildButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+editor_description = "ArrowDown"
+layout_mode = 2
+text = "Select Child"
+
+[node name="SpriteSelectNextButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/SelectSprite"]
+editor_description = "PageNext"
+layout_mode = 2
+text = "Select Next"
+
+[node name="HSeparator2" type="HSeparator" parent="TabContainer/Character/Character/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CharacterTabContainer" type="TabContainer" parent="TabContainer/Character/Character/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+current_tab = 0
+tabs_visible = false
+
+[node name="BoneVBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Bone" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer"]
+layout_mode = 2
+
+[node name="HeaderHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="BoneTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/HeaderHBoxContainer"]
+editor_description = "Bone2D"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="BoneButtonsLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/HeaderHBoxContainer"]
+layout_mode = 2
+text = "Bone"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone"]
+layout_mode = 2
+
+[node name="MoveBoneHeadButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone"]
+editor_description = "ToolMove"
+layout_mode = 2
+text = "Move Bone Head"
+
+[node name="MoveBoneSentanButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone"]
+editor_description = "ToolMove"
+layout_mode = 2
+text = "Move Bone Tail"
+
+[node name="AddBoneButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone"]
+editor_description = "Add"
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+text = "Add Bone"
+
+[node name="AddBoneFromHeadButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone"]
+editor_description = "Add"
+visible = false
+layout_mode = 2
+text = "Add Bone from Head"
+
+[node name="BoneMoveSnapOptionButtonIg" type="OptionButton" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone"]
+layout_mode = 2
+
+[node name="ImageVBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Select" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HeaderHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="ImageTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/HeaderHBoxContainer"]
+editor_description = "Image"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/HeaderHBoxContainer"]
+layout_mode = 2
+text = "Image"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+layout_mode = 2
+
+[node name="SelectingBoneLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+visible = false
+layout_mode = 2
+text = "Selecting"
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+visible = false
+layout_mode = 2
+text = ":"
+
+[node name="SelectingBoneTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+editor_description = "Bone2D"
+visible = false
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectingBoneNameLabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SelectingLockToggleButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+editor_description = "Lock"
+visible = false
+layout_mode = 2
+toggle_mode = true
+
+[node name="RenameLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+visible = false
+layout_mode = 2
+text = "Rename"
+
+[node name="Label2" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+visible = false
+layout_mode = 2
+text = ":"
+
+[node name="SelectingRenameLineEdit" type="LineEdit" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+visible = false
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ImageTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+editor_description = "Image"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Loaded Image List"
+
+[node name="AddImageButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+editor_description = "Add"
+layout_mode = 2
+text = "Add Image Or DnD"
+script = ExtResource("2_hstm8")
+
+[node name="ImageTree" type="Tree" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+hide_root = true
+script = ExtResource("3_t4msw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AddImageDirButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Folder"
+layout_mode = 2
+
+[node name="RemoveImageButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Remove"
+visible = false
+layout_mode = 2
+
+[node name="RemoveImageCheckButton" type="CheckButton" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Remove"
+layout_mode = 2
+
+[node name="ImageTextInputHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="ImageTextInputLineEdit" type="LineEdit" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTextInputHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ImageTextInputConfirmButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTextInputHBoxContainer"]
+layout_mode = 2
+text = "Confirm"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Padding"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = ":"
+
+[node name="ImagePaddingSpinBox" type="SpinBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 99999.0
+rounded = true
+allow_greater = true
+alignment = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
+
+[node name="CanvasCenterContainer" type="CenterContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1407, 1779)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CanvasMarginContainer" type="MarginContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ImageTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer"]
+unique_name_in_owner = true
+texture_filter = 1
+texture_repeat = 1
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 2
+
+[node name="ImageCursorSprite2D" type="Sprite2D" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer"]
+unique_name_in_owner = true
+visible = false
+
+[node name="PolygonPoints" type="Node2D" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer"]
+script = ExtResource("3_8ota3")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ImageModeOptionButtonIg" type="OptionButton" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PolygonMenuHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "EditorPathSharpHandle"
+layout_mode = 2
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+layout_mode = 2
+text = "Outer"
+
+[node name="AddOuterPolygonPointButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "Add"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bo4g7")
+
+[node name="AddOuterPolygonInternalPointButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "EditInternal"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bo4g7")
+
+[node name="MoveOuterPolygonPointButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "ToolMove"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bo4g7")
+
+[node name="RemoveOuterPolygonPointButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "Remove"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bo4g7")
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "EditorPathSharpHandle"
+modulate = Color(0, 0, 1, 1)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="Label2" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+layout_mode = 2
+text = "Inner"
+
+[node name="AddInnerPolygonPointButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "Add"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bo4g7")
+
+[node name="MoveInnerPolygonPointButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "ToolMove"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bo4g7")
+
+[node name="RemoveInnerPolygonPointButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer"]
+editor_description = "Remove"
+layout_mode = 2
+toggle_mode = true
+button_group = SubResource("ButtonGroup_bo4g7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Zoom"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ":"
+
+[node name="ZoomAutoCheckBox" type="CheckBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Auto Zoom"
+button_pressed = true
+
+[node name="ZoomValueLabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "1000%"
+
+[node name="ImageZoomHSlider" type="HSlider" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 0.5
+max_value = 24.0
+step = 0.5
+value = 1.0
+
+[node name="Label2" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "BgColor"
+
+[node name="LabelIg2" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ":"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+edit_alpha = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Snap"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = ":"
+
+[node name="ImageSnapOptionButtonIg" type="OptionButton" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Point"
+
+[node name="LabelIg3" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = ":"
+
+[node name="ImageCursorOptionButtonIg" type="OptionButton" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Atlases"
+
+[node name="ImageRectItemTree" type="Tree" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+hide_root = true
+script = ExtResource("5_kfj81")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="AddImageRectButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/HBoxContainer"]
+editor_description = "Add"
+layout_mode = 2
+
+[node name="RemoveImageRectCheckButton" type="CheckButton" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/HBoxContainer"]
+editor_description = "Remove"
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="RectHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+text = "Atlas"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label2" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+layout_mode = 2
+text = "Position"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+layout_mode = 2
+text = "X:"
+
+[node name="ImageAtlasPositionXSpinBox" type="SpinBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -99999.0
+max_value = 99999.0
+step = 0.1
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="Label2Ig" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+layout_mode = 2
+text = "Y:"
+
+[node name="ImageAtlasPositionYSpinBox" type="SpinBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -99999.0
+max_value = 99999.0
+step = 0.1
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label3" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Size"
+
+[node name="Label4" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Width"
+
+[node name="Label3Ig" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = ":"
+
+[node name="ImageAtlasSizeWidthSpinBox" type="SpinBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -99999.0
+max_value = 99999.0
+step = 0.1
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="Label5" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Height"
+
+[node name="Label4Ig" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = ":"
+
+[node name="ImageAtlasSizeHeightSpinBox" type="SpinBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -99999.0
+max_value = 99999.0
+step = 0.1
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PivotHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer"]
+layout_mode = 2
+text = "Origin Position"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer"]
+layout_mode = 2
+text = "X:"
+
+[node name="ImagePivotXSpinBox" type="SpinBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -99999.0
+max_value = 99999.0
+step = 0.1
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="Label2Ig" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer"]
+layout_mode = 2
+text = "Y:"
+
+[node name="ImagePivotYSpinBox" type="SpinBox" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -99999.0
+max_value = 99999.0
+step = 0.1
+allow_greater = true
+allow_lesser = true
+alignment = 2
+
+[node name="HSeparator2" type="HSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ImageNameLineEdit" type="LineEdit" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HFlowContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ImageAddOneButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Sprite2D"
+layout_mode = 2
+text = "Add Sprite2D To Selected Node Child"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ImageAddPolygonButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+editor_description = "Polygon2D"
+layout_mode = 2
+text = "Add Polygon2D To Selected Node Child Position"
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "To"
+
+[node name="LabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ":"
+
+[node name="PolygonParentIconTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="PolygonParentLabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="PolygonParentSelectButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Select"
+
+[node name="PolygonViewerNodeAddButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Add ViewerNode"
+
+[node name="AnimationVBoxContainer" type="VBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Animation" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer"]
+layout_mode = 2
+
+[node name="HeaderHBoxContainer" type="HBoxContainer" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="AnimationPlayerTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/HeaderHBoxContainer"]
+editor_description = "AnimationPlayer"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/HeaderHBoxContainer"]
+layout_mode = 2
+text = "Animation"
+
+[node name="VSeparator" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+layout_mode = 2
+
+[node name="SelectingAnimationPlayerTextureRect" type="TextureRect" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+editor_description = "Bone2D"
+layout_mode = 2
+stretch_mode = 5
+
+[node name="SelectingAnimationPlayerLabel" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+layout_mode = 2
+text = "Selecting"
+
+[node name="Label" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+layout_mode = 2
+text = ":"
+
+[node name="SelectingAnimationPlayerLabelIg" type="Label" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="SelectAnimationPlayerButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+editor_description = "AnimationPlayer"
+layout_mode = 2
+text = "Select"
+
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="InsertKeyFrameButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+editor_description = "Key"
+layout_mode = 2
+disabled = true
+text = "Insert KeyFrame"
+
+[node name="InsertKeyFrameWithChildrenButton" type="Button" parent="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation"]
+editor_description = "Key"
+layout_mode = 2
+disabled = true
+text = "Insert KeyFrame With Children"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="TabContainer/Character"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BoneListTree" type="Tree" parent="TabContainer/Character/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+hide_root = true
+
+[node name="BOTTOM_PAD3" type="Control" parent="TabContainer/Character/HSplitContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BOTTOM_PAD" type="Control" parent="TabContainer/Character"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="FileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 2
+title = "Open a File"
+initial_position = 2
+size = Vector2i(1200, 700)
+auto_translate = false
+ok_button_text = "Open"
+file_mode = 0
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="tab_changed" from="TabContainer" to="." method="_on_tab_container_tab_changed"]
+[connection signal="toggled" from="TabContainer/Character/Character/AlwaysVBoxContainer/VisibleToggleCharacterButton" to="." method="_on_visible_toggle_character_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/AlwaysVBoxContainer/BoneTabButton" to="." method="_on_bone_tab_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/AlwaysVBoxContainer/ImageTabButton" to="." method="_on_image_tab_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/AlwaysVBoxContainer/AnimationTabButton" to="." method="_on_animation_tab_button_toggled"]
+[connection signal="pressed" from="TabContainer/Character/Character/AlwaysVBoxContainer/VBoxContainer/RefreshCharacterButton" to="." method="_on_refresh_character_button_pressed"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingLockToggleButton" to="." method="_on_selecting_lock_toggle_button_toggled"]
+[connection signal="text_submitted" from="TabContainer/Character/Character/VBoxContainer/SelectBone/SelectingRenameLineEdit" to="." method="_on_selecting_rename_line_edit_text_submitted"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectBone/NearSelectButton" to="." method="_on_near_select_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectBone/SelectParentButton" to="." method="_on_select_parent_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectBone/SelectChildButton" to="." method="_on_select_child_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectBone/SelectNextButton" to="." method="_on_select_next_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectBone/SelectAllButton" to="." method="_on_select_all_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteVisibleButton" to="." method="_on_sprite_visible_button_pressed"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectingLockToggleButton" to="." method="_on_sprite_selecting_lock_toggle_button_toggled"]
+[connection signal="text_submitted" from="TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectingRenameLineEdit" to="." method="_on_sprite_selecting_rename_line_edit_text_submitted"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteNearSelectButton" to="." method="_on_sprite_near_select_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectParentButton" to="." method="_on_sprite_select_parent_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectChildButton" to="." method="_on_sprite_select_child_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/SelectSprite/SpriteSelectNextButton" to="." method="_on_sprite_select_next_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/MoveBoneHeadButton" to="." method="_on_move_bone_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/MoveBoneSentanButton" to="." method="_on_move_bone_sentan_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneButton" to="." method="_on_add_bone_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/AddBoneFromHeadButton" to="." method="_on_add_bone_from_head_button_pressed"]
+[connection signal="item_selected" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/BoneVBoxContainer/Bone/BoneMoveSnapOptionButtonIg" to="." method="_on_bone_move_snap_option_button_ig_item_selected"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/SelectingLockToggleButton" to="." method="_on_selecting_lock_toggle_button_toggled"]
+[connection signal="text_submitted" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/Select/SelectingRenameLineEdit" to="." method="_on_selecting_rename_line_edit_text_submitted"]
+[connection signal="dropped" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/AddImageButton" to="." method="_on_add_image_button_dropped"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/AddImageButton" to="." method="_on_add_image_button_pressed"]
+[connection signal="dropped" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTree" to="." method="_on_image_tree_dropped"]
+[connection signal="empty_clicked" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTree" to="." method="_on_image_tree_empty_clicked"]
+[connection signal="item_selected" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTree" to="." method="_on_image_tree_item_selected"]
+[connection signal="removed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTree" to="." method="_on_image_tree_removed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/AddImageDirButton" to="." method="_on_add_image_dir_button_pressed"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/RemoveImageCheckButton" to="." method="_on_remove_image_check_button_toggled"]
+[connection signal="text_submitted" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTextInputHBoxContainer/ImageTextInputLineEdit" to="." method="_on_image_text_input_line_edit_text_submitted"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/ImageTextInputHBoxContainer/ImageTextInputConfirmButton" to="." method="_on_image_text_input_confirm_button_pressed"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImagePaddingSpinBox" to="." method="_on_image_padding_spin_box_value_changed"]
+[connection signal="gui_input" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer" to="." method="_on_scroll_container_gui_input"]
+[connection signal="resized" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer" to="." method="_on_scroll_container_resized"]
+[connection signal="gui_input" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer/ColorRect" to="." method="_on_color_rect_gui_input"]
+[connection signal="resized" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/ScrollContainer/CanvasCenterContainer/CanvasMarginContainer/ImageTextureRect" to="." method="_on_image_texture_rect_resized"]
+[connection signal="item_selected" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/ImageModeOptionButtonIg" to="." method="_on_image_mode_option_button_item_selected"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddOuterPolygonPointButton" to="." method="_on_add_outer_polygon_point_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddOuterPolygonInternalPointButton" to="." method="_on_add_outer_polygon_internal_point_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/MoveOuterPolygonPointButton" to="." method="_on_move_outer_polygon_point_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/RemoveOuterPolygonPointButton" to="." method="_on_remove_outer_polygon_point_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/AddInnerPolygonPointButton" to="." method="_on_add_inner_polygon_point_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/MoveInnerPolygonPointButton" to="." method="_on_move_inner_polygon_point_button_toggled"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PolygonMenuHBoxContainer/RemoveInnerPolygonPointButton" to="." method="_on_remove_inner_polygon_point_button_toggled"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ImageZoomHSlider" to="." method="_on_image_zoom_h_slider_value_changed"]
+[connection signal="color_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
+[connection signal="item_selected" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImageSnapOptionButtonIg" to="." method="_on_image_snap_option_button_item_selected"]
+[connection signal="item_selected" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImageCursorOptionButtonIg" to="." method="_on_image_cursor_option_button_ig_item_selected"]
+[connection signal="item_selected" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/ImageRectItemTree" to="." method="_on_image_rect_item_tree_item_selected"]
+[connection signal="removed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/ImageRectItemTree" to="." method="_on_image_rect_item_tree_removed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/HBoxContainer/AddImageRectButton" to="." method="_on_add_image_rect_button_pressed"]
+[connection signal="toggled" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/VBoxContainer2/HBoxContainer/RemoveImageRectCheckButton" to="." method="_on_remove_image_rect_check_button_toggled"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer/ImageAtlasPositionXSpinBox" to="." method="_on_image_atlas_position_x_spin_box_value_changed"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/RectHBoxContainer/ImageAtlasPositionYSpinBox" to="." method="_on_image_atlas_position_y_spin_box_value_changed"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/ImageAtlasSizeWidthSpinBox" to="." method="_on_image_atlas_size_width_spin_box_value_changed"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer3/ImageAtlasSizeHeightSpinBox" to="." method="_on_image_atlas_sizeheight_spin_box_value_changed"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer/ImagePivotXSpinBox" to="." method="_on_image_pivot_x_spin_box_value_changed"]
+[connection signal="value_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/PivotHBoxContainer/ImagePivotYSpinBox" to="." method="_on_image_pivot_y_spin_box_value_changed"]
+[connection signal="text_changed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer2/ImageNameLineEdit" to="." method="_on_name_line_edit_text_changed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ImageAddOneButton" to="." method="_on_image_add_one_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/ImageAddPolygonButton" to="." method="_on_image_add_polygon_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/PolygonParentSelectButton" to="." method="_on_polygon_parent_select_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/ImageVBoxContainer/HSplitContainer/HSplitContainer/HSplitContainer/HBoxContainer/VBoxContainer/HBoxContainer/PolygonViewerNodeAddButton" to="." method="_on_polygon_viewer_node_add_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/SelectAnimationPlayerButton" to="." method="_on_select_animation_player_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/InsertKeyFrameButton" to="." method="_on_insert_key_frame_button_pressed"]
+[connection signal="pressed" from="TabContainer/Character/Character/VBoxContainer/CharacterTabContainer/AnimationVBoxContainer/Animation/InsertKeyFrameWithChildrenButton" to="." method="_on_insert_key_frame_with_children_button_pressed"]
+[connection signal="button_clicked" from="TabContainer/Character/HSplitContainer/BoneListTree" to="." method="_on_bone_list_tree_button_clicked"]
+[connection signal="item_selected" from="TabContainer/Character/HSplitContainer/BoneListTree" to="." method="_on_bone_list_tree_item_selected"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

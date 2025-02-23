@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbe80682a2rl0"]
+
+[ext_resource type="Script" path="res://addons/godot-skeleton2d-helper/tree.gd" id="1_4515l"]
+[ext_resource type="Script" path="res://addons/godot-skeleton2d-helper/file_drop_tree.gd" id="2_xohuu"]
+
+[node name="Control" type="VBoxContainer" node_paths=PackedStringArray("tree")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4515l")
+tree = NodePath("Tree")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1288.31
+offset_top = 673.818
+offset_right = 1328.31
+offset_bottom = 696.818
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "ADD"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "ADD DIR"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "SAVE"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "LOAD"
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_xohuu")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer2"]
+layout_mode = 2
+text = "DELETE DISPLAY"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="dropped" from="Tree" to="." method="_on_tree_dropped"]
+[connection signal="toggled" from="HBoxContainer2/CheckButton" to="." method="_on_check_button_toggled"]

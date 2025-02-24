@@ -14,7 +14,6 @@ func _init() -> void:
 	bottom_dock_scene = BOTTOM_DOCK_TSCN.instantiate()
 	bottom_dock_scene.undo_redo = get_undo_redo()
 	locale = EditorInterface.get_editor_settings().get_setting("interface/editor/editor_language")
-	locale = "ja"
 	bottom_dock_scene.load_all_data()
 
 func _tr(s:String) -> String:

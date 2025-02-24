@@ -302,7 +302,6 @@ const locale_ko_dic:Dictionary = {
 
 func _init() -> void:
 	locale =  EditorInterface.get_editor_settings().get_setting("interface/editor/editor_language")
-	locale = "ja"
 func _tr(s:String) -> String:
 	if s == "": return s
 	if locale == "ja":

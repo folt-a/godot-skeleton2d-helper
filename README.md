@@ -4,7 +4,7 @@ This is a tool that supports the creation of bone animations for Godot 4.3~.
 
 Godot Engine Editor only addon.
 
-[English README is here](#English)
+[English README is here](#englishreadme)
 
 ---
 
@@ -122,8 +122,6 @@ Godotのボーンはなんか……1本余分に増やさないと動かない�
 This is a tool that supports the creation of bone animations for Godot 4.3~.
 
 Godot Engine Editor only addon.
-
-![English](#Endlish)
 
 I created it for my own project.
 
